@@ -75,6 +75,12 @@ MAPS_API_KEY=your_google_maps_api_key_here
 For detailed instructions on how to contribute, please see our [CONTRIBUTING.md](CONTRIBUTING.md) file.
 For details on our release process, see the [RELEASE_PROCESS.md](RELEASE_PROCESS.md) file.
 
+## Building and Generating APKs
+
+For information about workflows that generate APK files and how to invoke them:
+- **Turkish:** See [APK_WORKFLOW_TR.md](APK_WORKFLOW_TR.md)
+- **English:** See [APK_WORKFLOW_EN.md](APK_WORKFLOW_EN.md)
+
 ## Repository Statistics
 
 ![Alt](https://repobeats.axiom.co/api/embed/1d75239069a6d671fe0b8f80b2e1bf590a98f0eb.svg "Repobeats analytics image")
