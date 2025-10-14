@@ -77,9 +77,13 @@ For details on our release process, see the [RELEASE_PROCESS.md](RELEASE_PROCESS
 
 ## Building and Generating APKs
 
-For information about workflows that generate APK files and how to invoke them:
-- **Turkish:** See [APK_WORKFLOW_TR.md](APK_WORKFLOW_TR.md)
-- **English:** See [APK_WORKFLOW_EN.md](APK_WORKFLOW_EN.md)
+For information about workflows that generate APK files and how to invoke them, see the [APK Workflow Documentation Index](APK_WORKFLOW_INDEX.md).
+
+Quick links:
+- 📖 **Full Guide (Turkish):** [APK_WORKFLOW_TR.md](APK_WORKFLOW_TR.md)
+- 📖 **Full Guide (English):** [APK_WORKFLOW_EN.md](APK_WORKFLOW_EN.md)
+- ⚡ **Quick Reference:** [APK_WORKFLOW_QUICKREF.md](APK_WORKFLOW_QUICKREF.md)
+- 📊 **Visual Diagram:** [APK_WORKFLOW_DIAGRAM.txt](APK_WORKFLOW_DIAGRAM.txt)
 
 ## Repository Statistics
 
