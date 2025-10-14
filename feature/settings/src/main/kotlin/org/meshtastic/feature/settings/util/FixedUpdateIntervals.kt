@@ -40,6 +40,7 @@ enum class FixedUpdateIntervals(val value: Long) {
     FORTY_FIVE_SECONDS(45L),
     ONE_MINUTE(TimeUnit.MINUTES.toSeconds(1)),
     TWO_MINUTES(TimeUnit.MINUTES.toSeconds(2)),
+    THREE_MINUTES(TimeUnit.MINUTES.toSeconds(3)),
     FIVE_MINUTES(TimeUnit.MINUTES.toSeconds(5)),
     TEN_MINUTES(TimeUnit.MINUTES.toSeconds(10)),
     FIFTEEN_MINUTES(TimeUnit.MINUTES.toSeconds(15)),
@@ -99,6 +100,10 @@ enum class IntervalConfiguration {
             ALL -> FixedUpdateIntervals.entries
             BROADCAST_SHORT ->
                 listOf(
+                    FixedUpdateIntervals.ONE_MINUTE,
+                    FixedUpdateIntervals.THREE_MINUTES,
+                    FixedUpdateIntervals.FIVE_MINUTES,
+                    FixedUpdateIntervals.TEN_MINUTES,
                     FixedUpdateIntervals.THIRTY_MINUTES,
                     FixedUpdateIntervals.ONE_HOUR,
                     FixedUpdateIntervals.TWO_HOURS,
@@ -172,6 +177,7 @@ enum class IntervalConfiguration {
                     FixedUpdateIntervals.THIRTY_SECONDS,
                     FixedUpdateIntervals.ONE_MINUTE,
                     FixedUpdateIntervals.TWO_MINUTES,
+                    FixedUpdateIntervals.THREE_MINUTES,
                     FixedUpdateIntervals.FIVE_MINUTES,
                     FixedUpdateIntervals.TEN_MINUTES,
                     FixedUpdateIntervals.FIFTEEN_MINUTES,
@@ -255,6 +261,10 @@ enum class IntervalConfiguration {
             POSITION_BROADCAST ->
                 listOf(
                     FixedUpdateIntervals.UNSET,
+                    FixedUpdateIntervals.FIVE_MINUTES,
+                    FixedUpdateIntervals.TEN_MINUTES,
+                    FixedUpdateIntervals.FIFTEEN_MINUTES,
+                    FixedUpdateIntervals.THIRTY_MINUTES,
                     FixedUpdateIntervals.ONE_HOUR,
                     FixedUpdateIntervals.TWO_HOURS,
                     FixedUpdateIntervals.THREE_HOURS,
