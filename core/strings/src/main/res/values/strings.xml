@@ -22,7 +22,7 @@
     <string name="zh_CN" translatable="false">简体中文</string>
     <string name="zh_TW" translatable="false">繁體中文</string>
 
-    <string name="app_name" translatable="false">Meshtastic</string>
+    <string name="app_name" translatable="false">MeshtasticxTA1KYN</string>
     <string name="some_username" translatable="false">SKH</string>
     <string name="sample_message" translatable="false">hey I found the cache, it is over here next to the big tiger. I\'m kinda scared.</string>
 
@@ -559,7 +559,7 @@
     <string name="override_frequency_mhz">Frequency Override</string>
     <string name="pa_fan_disabled">PA fan disabled</string>
     <string name="ignore_mqtt">Ignore MQTT</string>
-    <string name="ok_to_mqtt">Ok to MQTT</string>
+    <string name="ok_to_mqtt">OK to MQTT</string>
     <string name="mqtt_config">MQTT Config</string>
     <string name="mqtt_enabled">MQTT enabled</string>
     <string name="address">Address</string>
