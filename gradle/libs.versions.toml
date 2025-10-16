@@ -28,12 +28,12 @@ ktorfit = "2.6.4"
 
 # Other
 coil = "3.3.0"
-dd-sdk-android = "3.1.0"
+dd-sdk-android = "3.2.0"
 detekt = "1.23.8"
 devtools-ksp = "2.2.20-2.0.3"
 markdownRenderer = "0.37.0"
 osmdroid-android = "6.1.20"
-protobuf = "4.32.1"
+protobuf = "4.33.0"
 
 
 [libraries]
@@ -131,7 +131,7 @@ dd-sdk-android-session-replay-compose = { module = "com.datadoghq:dd-sdk-android
 dd-sdk-android-timber = { module = "com.datadoghq:dd-sdk-android-timber", version.ref = "dd-sdk-android" }
 dd-sdk-android-trace = { module = "com.datadoghq:dd-sdk-android-trace", version.ref = "dd-sdk-android" }
 dd-sdk-android-trace-otel = { module = "com.datadoghq:dd-sdk-android-trace-otel", version.ref = "dd-sdk-android" }
-dokka-android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version = "2.0.0" }
+dokka-android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version = "2.1.0" }
 javax-inject = { module = "javax.inject:javax.inject", version = "1" }
 markdown-renderer = { module = "com.mikepenz:multiplatform-markdown-renderer", version.ref = "markdownRenderer" }
 markdown-renderer-m3 = { module = "com.mikepenz:multiplatform-markdown-renderer-m3", version.ref = "markdownRenderer" }
@@ -193,7 +193,7 @@ firebase-perf = { id = "com.google.firebase.firebase-perf", version = "2.0.1" }
 datadog = { id = "com.datadoghq.dd-sdk-android-gradle-plugin", version = "1.21.0" }
 dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version = "3.1.0" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-dokka = { id = "org.jetbrains.dokka", version = "2.0.0" }
+dokka = { id = "org.jetbrains.dokka", version = "2.1.0" }
 protobuf = { id = "com.google.protobuf", version = "0.9.5" }
 room = { id = "androidx.room", version.ref = "room" }
 spotless = { id = "com.diffplug.spotless", version = "8.0.0" }
