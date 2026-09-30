@@ -120,6 +120,9 @@ enum class IntervalConfiguration {
 
             BROADCAST_SHORT ->
                 listOf(
+                    FixedUpdateIntervals.ONE_MINUTE,
+                    FixedUpdateIntervals.FIVE_MINUTES,
+                    FixedUpdateIntervals.TEN_MINUTES,
                     FixedUpdateIntervals.THIRTY_MINUTES,
                     FixedUpdateIntervals.ONE_HOUR,
                     FixedUpdateIntervals.TWO_HOURS,
@@ -293,6 +296,7 @@ enum class IntervalConfiguration {
             POSITION_BROADCAST ->
                 listOf(
                     FixedUpdateIntervals.UNSET,
+                    FixedUpdateIntervals.THIRTY_SECONDS,
                     FixedUpdateIntervals.ONE_MINUTE,
                     FixedUpdateIntervals.NINETY_SECONDS,
                     FixedUpdateIntervals.FIVE_MINUTES,

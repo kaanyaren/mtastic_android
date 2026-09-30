@@ -108,7 +108,6 @@ fun TracerouteLogScreen(
     val state by viewModel.state.collectAsStateWithLifecycle()
     val timeFrame by viewModel.timeFrame.collectAsStateWithLifecycle()
     val availableTimeFrames by viewModel.availableTimeFrames.collectAsStateWithLifecycle()
-    val lastTracerouteTime by viewModel.lastTraceRouteTime.collectAsStateWithLifecycle()
 
     fun getUsername(nodeNum: Int): String = with(viewModel.getUser(nodeNum)) { "$long_name ($short_name)" }
 
@@ -145,7 +144,7 @@ fun TracerouteLogScreen(
             if (!state.isLocal) {
                 CooldownIconButton(
                     onClick = { viewModel.requestTraceroute() },
-                    cooldownTimestamp = lastTracerouteTime,
+                    cooldownTimestamp = null, // personal: traceroute cooldown removed
                 ) {
                     Icon(imageVector = MeshtasticIcons.Refresh, contentDescription = null)
                 }

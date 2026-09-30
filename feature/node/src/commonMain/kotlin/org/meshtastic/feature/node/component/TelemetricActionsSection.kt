@@ -156,7 +156,7 @@ private fun rememberTelemetricFeatures(
             icon = LogsType.TRACEROUTE.icon,
             requestAction = { NodeMenuAction.TraceRoute(it) },
             logsType = LogsType.TRACEROUTE,
-            cooldownTimestamp = lastTracerouteTime,
+            cooldownTimestamp = null, // personal: traceroute cooldown removed
             isVisible = { !isLocal },
         ),
         TelemetricFeature(

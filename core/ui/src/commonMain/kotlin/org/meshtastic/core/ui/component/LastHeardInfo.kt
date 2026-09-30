@@ -18,12 +18,18 @@ package org.meshtastic.core.ui.component
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
+import androidx.compose.runtime.produceState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.PreviewLightDark
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 import org.meshtastic.core.common.util.DateFormatter
+import org.meshtastic.core.common.util.nowMillis
 import org.meshtastic.core.common.util.nowSeconds
 import org.meshtastic.core.model.util.TimeConstants
 import org.meshtastic.core.resources.Res
@@ -40,9 +46,12 @@ fun LastHeardInfo(
     relative: Boolean = true,
     contentColor: Color = MaterialTheme.colorScheme.onSurface,
 ) {
+    // ponytail: minute tick re-reads the clock so relative text refreshes in place; ceiling is ~60s
+    // past a minute boundary, fine for "Xm ago" granularity.
+    val minuteTick = rememberMinuteTick(enabled = relative)
     val text =
         if (relative) {
-            formatAgo(lastHeard)
+            key(minuteTick) { formatAgo(lastHeard) }
         } else {
             DateFormatter.formatDateTime(lastHeard.toLong() * TimeConstants.MS_PER_SEC)
         }
@@ -61,3 +70,18 @@ fun LastHeardInfo(
 fun LastHeardInfoPreview() {
     AppTheme { LastHeardInfo(lastHeard = nowSeconds.toInt() - 8600) }
 }
+
+/** Wall-clock minute counter; 0 and no coroutine when disabled (absolute dates never go stale). */
+@Composable
+private fun rememberMinuteTick(enabled: Boolean): Long {
+    if (!enabled) return 0L
+    val tick by produceState(initialValue = 0L) {
+        while (isActive) {
+            delay(MINUTE_TICK_MS - nowMillis % MINUTE_TICK_MS)
+            value++
+        }
+    }
+    return tick
+}
+
+private const val MINUTE_TICK_MS = 60_000L
